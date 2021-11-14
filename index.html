@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="stylesheet" href="style_self.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
 </head>
 <body>
@@ -16,7 +16,7 @@
             <a href="https://github.com/gyu-bin">Bin</a>
         </div>
      <ul class="navbar__menu">
-         <li class="navbar__menu__item">Home</li>
+         <li class="navbar__menu__item active">Home</li>
          <li class="navbar__menu__item">About</li>
          <li class="navbar__menu__item">Skills</li>
          <li class="navbar__menu__item">My work</li>
@@ -33,12 +33,12 @@
     <h2 class="home__description">
         Give me the money
     </h2>
-    <button>CONTACT ME</button>
+    <button class="home_contact">CONTACT ME</button>
     </div>
 </section>
 </div>
 <!--about-->
-    <section id="about">
+    <section id="about" class="section .section__container">
         <div id="about__title">
         <h1>About me</h1>
         <p>Show me the money</p>
@@ -82,8 +82,10 @@
         <div class="about__jobs">
             <div class="job">
                 <img src="" alt="" class="job__logo"/>
+                <div class="job__description">
                 <p class="job__name">LG </p>
                 <p class="job__period">LONG TIME</p>
+            </div>
             </div>
             <div class="job"></div>
         </div>
@@ -91,15 +93,18 @@
         <div class="about__jobs">
             <div class="job">
                 <img src="" alt="" class="job__logo"/>
+                <div class="job__description">
                 <p class="job__name">SAMSUNG</p>
                 <p class="job__period">LONG TIME</p>
             </div>
+                </div>
             <div class="job"></div>
         </div>
     </section>
 
 <!--skills-->
-    <article id="skills">
+    <section id="skills" class="section ">
+        <div class="section__container">
         <div class="skills__title">
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
@@ -118,7 +123,7 @@
                     </div>
 <!--            progress bar-->
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width:99%;"></div>
                     </div>
                 </div>
 
@@ -126,11 +131,11 @@
                 <div class="skill">
                     <div class="skill_description">
                         <span>CSS</span>
-                        <span>99%</span>
+                        <span>95%</span>
                     </div>
                     <!--            progress bar-->
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width:95%;"></div>
                     </div>
                 </div>
 
@@ -138,11 +143,11 @@
                 <div class="skill">
                     <div class="skill_description">
                         <span>JavaScript</span>
-                        <span>99%</span>
+                        <span>80%</span>
                     </div>
                     <!--            progress bar-->
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width:80%;"></div>
                     </div>
                 </div>
 
@@ -150,23 +155,23 @@
                 <div class="skill">
                     <div class="skill_description">
                         <span>React</span>
-                        <span>99%</span>
+                        <span>90%</span>
                     </div>
                     <!--            progress bar-->
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width:90%;"></div>
                     </div>
                 </div>
 
                 <!--                skill 5-->
                 <div class="skill">
                     <div class="skill_description">
-                        <span>NODE.JS</span>
-                        <span>99%</span>
+                        <span>Node.js</span>
+                        <span>75%</span>
                     </div>
                     <!--            progress bar-->
                     <div class="skill__bar">
-                        <div class="skill__value"></div>
+                        <div class="skill__value" style="width:75%;"></div>
                     </div>
                 </div>
             </div>
@@ -191,16 +196,17 @@
                 </div>
             </div>
         </div>
-    </article>
+        </div>
+    </section >
 
 <!--work-->
-    <article id="works">
+    <section id="works" class="section">
         <div class="work__text">
         <h1>My Work</h1>
         <h3>Project</h3>
         </div>
         <div class="work__categories">
-            <button class="category__btn">
+            <button class="category__btn active">
                 All<span class="category__count">8</span> </button>
             <button class="category__btn">
                 Front-end<span class="category__count">3</span> </button>
@@ -212,7 +218,7 @@
 
         <div class="work__projects">
             <a href="" class="project__img" target="blank">
-                <img src="img/projects/project1.png" alt=""/>
+                <img src="img/projects/project1.png" alt="" class="project"/>
                 <div class="project__description">
                     <h3>Youtube Site</h3>
                     <span>Clone coding with HTML and CSS</span>
@@ -220,7 +226,7 @@
             </a>
 
             <a href="" class="project__img" target="blank">
-                <img src="img/projects/project2.png" alt=""/>
+                <img src="img/projects/project2.png" alt="" class="project"/>
                 <div class="project__description">
                     <h3>Youtube Site</h3>
                     <span>Clone coding with HTML and CSS</span>
@@ -228,7 +234,7 @@
             </a>
 
             <a href="" class="project__img" target="blank">
-                <img src="img/projects/project3.png" alt=""/>
+                <img src="img/projects/project3.png" alt="" class="project"/>
                 <div class="project__description">
                     <h3>Youtube Site</h3>
                     <span>Clone coding with HTML and CSS</span>
@@ -236,7 +242,7 @@
             </a>
 
             <a href="" class="project__img" target="blank">
-                <img src="img/projects/project4.png" alt=""/>
+                <img src="img/projects/project4.png" alt="" class="project"/>
                 <div class="project__description">
                     <h3>Youtube Site</h3>
                     <span>Clone coding with HTML and CSS</span>
@@ -244,7 +250,7 @@
             </a>
 
             <a href="" class="project__img" target="blank">
-                <img src="img/projects/project5.png" alt=""/>
+                <img src="img/projects/project5.png" alt="" class="project">
                 <div class="project__description">
                     <h3>Youtube Site</h3>
                     <span>Clone coding with HTML and CSS</span>
@@ -252,7 +258,7 @@
             </a>
 
             <a href="" class="project__img" target="blank">
-                <img src="img/projects/project6.png" alt=""/>
+                <img src="img/projects/project6.png" alt="" class="project"/>
                 <div class="project__description">
                     <h3>Youtube Site</h3>
                     <span>Clone coding with HTML and CSS</span>
@@ -260,7 +266,7 @@
             </a>
 
             <a href="" class="project__img" target="blank">
-                <img src="img/projects/project7.png" alt=""/>
+                <img src="img/projects/project7.png" alt="" class="project"/>
                 <div class="project__description">
                     <h3>Youtube Site</h3>
                     <span>Clone coding with HTML and CSS</span>
@@ -268,17 +274,17 @@
             </a>
 
             <a href="" class="project__img" target="blank">
-                <img src="img/projects/project8.png" alt=""/>
+                <img src="img/projects/project8.png" alt="" class="project"/>
                 <div class="project__description">
                     <h3>Youtube Site</h3>
                     <span>Clone coding with HTML and CSS</span>
                 </div>
             </a>
         </div>
-    </article>
+    </section>
 
 <!--testimonials-->
-    <section id="testimonials">
+    <section id="testimonials" class="section">
         <h1>Testimonials</h1>
         <h3>See what they say about me</h3>
         <div class="testimonials">
@@ -301,7 +307,7 @@
     </section>
 
 <!--contact-->
-    <section id="contact">
+    <section id="contact" class="section">
         <h1 class="contact__title">Let's talk</h1>
         <h2 class="contact__email">rbqls6651@naver.com</h2>
         <div class="contact__links">
