@@ -74,12 +74,36 @@ document.addEventListener('scroll',()=>{
     }
 })
 
+const workBtnContainer=document.querySelector('.work__categories');
+const projectContainer=document.querySelector('.work__projects');
+const projects=document.querySelectorAll('.project')
+workBtnContainer.addEventListener('click',(e)=> {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+    projectContainer.classList.add('anim-out');
+    setTimeout(() => {
+        projects.forEach((project) => {
+            console.log(project.dataset.type);
+            if (filter === 'all' || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
+        projectContainer.classList.remove('anim-out');
+    },300);
+});
+
 
 //scrollIntoVIew를 계속써야되니까 그냥 미리 세팅해둠
 function scrollIntoView(selector){
     const scrollTo=document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:"smooth"})
 }
+
+
 
 
 
