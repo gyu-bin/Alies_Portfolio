@@ -12,16 +12,25 @@
 <!--   Navbar-->
     <nav id="navbar">
         <div class="navbar__logo">
-            <i class="fab fa-diaspora"></i>
-            <a href="https://github.com/gyu-bin">Bin</a>
+            <i class="fas fa-leaf"></i>
+            <a href="https://github.com/gyu-bin">Bini</a>
         </div>
      <ul class="navbar__menu">
-         <li class="navbar__menu__item active">Home</li>
-         <li class="navbar__menu__item">About</li>
-         <li class="navbar__menu__item">Skills</li>
-         <li class="navbar__menu__item">My work</li>
-         <li class="navbar__menu__item">Testimonial</li>
-         <li class="navbar__menu__item">Contact</li>
+         <!-- a 링크 효과      -->
+<!--         <li class="navbar__menu__item active"><a href="#home">Home</a></li>-->
+<!--         <li class="navbar__menu__item"><a href="#about">About</a></li>-->
+<!--         <li class="navbar__menu__item"><a href="#skills">Skills</a></li>-->
+<!--         <li class="navbar__menu__item"><a href="#works">My work</a></li>-->
+<!--         <li class="navbar__menu__item"><a href="#testimonials">Testimonial</a></li>-->
+<!--         <li class="navbar__menu__item"><a href="#contact">Contact</a></li>-->
+
+        <!--  JS 효과 -->
+         <li class="navbar__menu__item active" data-link="#home">Home</li>
+         <li class="navbar__menu__item" data-link="#about">About</li>
+         <li class="navbar__menu__item" data-link="#skills">Skills</li>
+         <li class="navbar__menu__item" data-link="#works">My work</li>
+         <li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>
+         <li class="navbar__menu__item" data-link="#contact">Contact</li>
      </ul>
 
 <!--        Toggle button-->
@@ -32,14 +41,16 @@
 
 <!--    Home-->
 <section id="home">
-    <div class="home__title">
-    <img src="img/people1.jpg" alt="" class="home__avatar"/>
-    <h1 class="home__title">Hello, <br> I'm Dream Coder</h1>
-    <h2 class="home__description">
-        Give me the money
-    </h2>
-    <button class="home_contact">CONTACT ME</button>
-    </div>
+   <div class="homeContainer">
+       <div class="home__title">
+           <img src="img/people1.jpg" alt="" class="home__avatar"/>
+           <h1 class="home__title">Hello, <br> I'm Dream Coder</h1>
+           <h2 class="home__description">
+               Give me the money
+           </h2>
+           <button class="home_contact" id="contactMe">CONTACT ME</button>
+       </div>
+   </div>
 </section>
 </div>
 <!--about-->
@@ -105,6 +116,8 @@
                 </div>
             <div class="job"></div>
         </div>
+
+
     </section>
 
 <!--skills-->
@@ -330,7 +343,13 @@
             2021 Dream Coding Bins - All rights reserved
         </p>
     </section>
+
+<button class="arrow_up">
+    <i class="fas fa-arrow-up"></i>
+</button>
+
 </body>
+<script src="main.js"></script>
 </html>
 
 
