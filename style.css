@@ -93,12 +93,8 @@ button{
     margin: 0 4px;
     cursor: pointer;
     border-radius: var(--size-border-radious);
-    border: 1px solid var(--color-pink);
+    border: 1px solid transparent;
     transition: .3s;
-}
-.navbar__menu__item.active{
-    border: 1px solid var(--color-white);
-
 }
 
 .navbar__menu__item:hover{
@@ -154,8 +150,6 @@ button{
     opacity: 0;
 }
 
-
-
 /*section common*/
 .section{
     padding: 50px;
@@ -169,13 +163,11 @@ button{
 }
 
 /*About*/
-.about__major{
+.about__majors{
     display: flex;
     justify-content: space-between;
-    margin: 80px 0;
-
+    margin: 90px 0;
 }
-
 
 .major__icon{
     width: 170px;
@@ -188,16 +180,21 @@ button{
     margin: auto auto 16px;
 }
 
-.major__icon:hover{
-    border: 1px solid var(--color-pink);
+.major__icon:hover i{
     color: var(--color-pink);
     transform: rotate(15deg);
     transition: all 500ms ease-in;
 
 }
-.major__title, .major__description{
+.major__title,
+.major__description {
+    color: var(--color-dark-grey);
+}
+
+.major__description {
     font-size: var(--font-small);
 }
+
 
 .job{
     display: flex;
@@ -297,13 +294,13 @@ button{
     padding: 8px 48px;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover{
     background-color: var(--color-pink);
     color: var(--color-white);
 }
 
-.category__count.active .category__count,
+.category__count.selected .category__count,
 .category__btn:hover .category__count{
     opacity: 1;
     top: 0;
@@ -485,6 +482,10 @@ button{
     #navbar{
         flex-direction: column;
         align-items: flex-start;
+        background: var(--color-pink);
+    }
+    #navbar.navbar--dark{
+        padding: 8px;
     }
     .navbar__menu{
         flex-direction: column;
@@ -492,6 +493,9 @@ button{
         margin: auto;
         font-size: 50px;
         display: none;
+    }
+    .navbar__menu.open{
+        display: block;
     }
     .about__major{
         flex-direction: column;

@@ -21,11 +21,17 @@ navbarMenu.addEventListener('click',(event)=>{
     if(link==null){
         return;
     }
-
+    navbarMenu.classList.remove('open');
     const scrollTo=document.querySelector(link);
     scrollTo.scrollIntoView({behavior:"smooth"})
 
 })
+
+const navToggleBtn=document.querySelector('.navbar__toggle-btn');
+navToggleBtn.addEventListener('click',()=>{
+    navbarMenu.classList.toggle('open')
+})
+
 //conTact Me
 const contactMe=document.querySelector('#contactMe');
 //1.
@@ -82,6 +88,13 @@ workBtnContainer.addEventListener('click',(e)=> {
     if (filter == null) {
         return;
     }
+
+    //Remove selction from the previous item and select the new one
+const active=document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target=e.target.nodeName==='BUTTON'? e.target: e.target.parentNode;
+    target.classList.add('selected');
+
     projectContainer.classList.add('anim-out');
     setTimeout(() => {
         projects.forEach((project) => {
@@ -95,6 +108,9 @@ workBtnContainer.addEventListener('click',(e)=> {
         projectContainer.classList.remove('anim-out');
     },300);
 });
+
+
+
 
 
 //scrollIntoVIew를 계속써야되니까 그냥 미리 세팅해둠
