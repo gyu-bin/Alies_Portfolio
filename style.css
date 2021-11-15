@@ -37,6 +37,7 @@
 body{
     margin: 0;
     cursor: default;
+    scroll-behavior: smooth;
 }
 
 a{
@@ -78,6 +79,8 @@ button{
     margin: 0 4px;
     cursor: pointer;
     border-radius: var(--size-border-radious);
+    border: 1px solid var(--color-pink);
+    transition: .3s;
 }
 .navbar__menu__item.active{
     border: 1px solid var(--color-white);
@@ -85,7 +88,18 @@ button{
 }
 
 .navbar__menu__item:hover{
-    background-color: var(--color-dark-pink);
+    border: 1px solid var(--color-white);
+    transition: all 300ms ease-in;
+    /*opacity: .5;*/
+}
+
+.navbar__toggle-btn{
+    position: absolute;
+    top: 10px;
+    right: 32px;
+    font-size: 24px;
+    color: white;
+    display: none;
 }
 
 /*home*/
@@ -137,6 +151,7 @@ button{
     display: flex;
     justify-content: space-between;
     margin: 80px 0;
+
 }
 
 
@@ -354,6 +369,7 @@ button{
 .testimonial{
     display: flex;
     margin: 32px 0;
+    justify-content: center;
 }
 
 .testimonial__avatar{
@@ -382,9 +398,66 @@ button{
     color: var(--color-pink);
 }
 
+/*Contact*/
+#contact{
+    background: var(--color-pink);
+}
 
+.contact__title,.contact__email,.contact__right{
+    color: var(--color-white);
+}
 
+.contact__title{
+    margin: 32px 0;
+}
+.contact__email{
+    font-size: var(--font-medium);
+}
 
+.contact__links{
+    font-size: var(--font-large);
+    margin: 24px 0;
+}
 
+.contact__links i:hover{
+    transform: scale(1.2);
+    transition: all 300ms ease-in;
+}
 
+/*For below 768px screen width*/
+@media screen and (max-width: 768px){
+    .navbar__toggle-btn{
+        display: block;
+    }
+    #navbar{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar__menu{
+        flex-direction: column;
+        text-align: center;
+        margin: auto;
+        font-size: 50px;
+        display: none;
+    }
+    .about__major{
+        flex-direction: column;
+    }
+    .major{
+        margin-bottom: 20px;
+    }
 
+    .skillSet{
+        flex-direction: column;
+    }
+
+    .project{
+        flex-grow: 1;
+    }
+
+    .testimonial__avatar{
+        height: 80px;
+        width: 80px;
+        margin-top: 50px;
+    }
+}
